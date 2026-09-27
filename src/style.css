@@ -1,0 +1,113 @@
+:root {
+  --main-blue: #4e79a7;
+  --light-blue: #f4f7ff;
+  --card-bg: #ffffff;
+  --text-dark: #333;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body {
+  background: var(--light-blue);
+  font-family: "Helvetica", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* カードUI */
+.card {
+  background: var(--card-bg);
+  padding: 24px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* タイマーの数字 */
+.timer-display {
+  font-size: 56px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-blue);
+  margin-bottom: 30px;
+  .timer-display {
+  animation: pulseColor 3s infinite;
+}
+
+@keyframes pulseColor {
+  0% { color: #4e79a7; }
+  50% { color: #76b7b2; }
+  100% { color: #4e79a7; }
+}
+
+}
+
+/* ボタン */
+.btn {
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-start {
+  background: var(--main-blue);
+  color: white;
+}
+
+.btn-stop {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-reset {
+  background: #bdc3c7;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* ヘッダー */
+nav {
+  background: var(--card-bg);
+  padding: 14px 20px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+nav button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+nav button.active {
+  color: var(--main-blue);
+  font-weight: 700;
+}
+
+/* モーダル */
+.modal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  width: 80%;
+  max-width: 420px;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f7ff 100%);
+}
+
